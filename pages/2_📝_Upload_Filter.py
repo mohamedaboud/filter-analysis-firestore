@@ -2,16 +2,22 @@ import pandas as pd
 import streamlit as st
 import datetime
 from datetime import datetime, time
-import plotly.express as px
 from streamlit_extras.colored_header import colored_header
 import sqlalchemy
 from sqlalchemy import create_engine, text
 from streamlit_extras.tags import tagger_component
 import random
+from google.cloud import firestore
 
 st.set_page_config(page_title = "Upload Filter", page_icon=':bar_chart:', layout="wide")
 st.title(':watermelon: Upload Filter')
 
+dbs = firestore.Client.from_service_account_json("pages/firestore-key.json")
+doc_ref = dbs.collection("filters").document("t3irKcUZTJvVgrGkd22m")
+doccc = doc_ref.get()
+
+doccc.id
+# doc.to_dict()
 
 db_name='filtersdb'
 filter_table='filters'
