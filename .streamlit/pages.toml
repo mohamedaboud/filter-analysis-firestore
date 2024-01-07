@@ -1,0 +1,14 @@
+[[pages]]
+path = "../Home_Page.py"
+name = "Home"
+icon = ":house:"
+
+[[pages]]
+path = "example_app/example_one.py"
+name = "Example One"
+icon = ":books:"
+
+[[pages]]
+path = "example_app/example_four.py"
+name = "Example Four"
+icon = "📖"
