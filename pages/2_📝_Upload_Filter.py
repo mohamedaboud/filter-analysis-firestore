@@ -12,12 +12,14 @@ from google.cloud import firestore
 st.set_page_config(page_title = "Upload Filter", page_icon=':bar_chart:', layout="wide")
 st.title(':watermelon: Upload Filter')
 
+
 dbs = firestore.Client.from_service_account_json("pages/firestore-key.json")
 doc_ref = dbs.collection("filters").document("t3irKcUZTJvVgrGkd22m")
-doccc = doc_ref.get()
+doc = doc_ref.get()
 
-doccc.id
-# doc.to_dict()
+doc.id
+d= doc.to_dict()
+d
 
 db_name='filtersdb'
 filter_table='filters'
